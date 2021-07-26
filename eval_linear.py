@@ -249,4 +249,5 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir', default=".", help='Path to save logs and checkpoints')
     parser.add_argument('--num_labels', default=1000, type=int, help='Number of labels for linear classifier')
     args = parser.parse_args()
+    Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     eval_linear(args)
